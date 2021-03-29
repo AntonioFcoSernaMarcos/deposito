@@ -1,26 +1,26 @@
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.Assert.*;
 
-import org.junit.jupiter.api.Test;
+import org.junit.*;
 
-class DepositoCombustibleTest {
+public class DepositoCombustibleTest {
 
 	@Test
-	void getDepNivel() {
+	public void getDepNivel() {
 		DepositoCombustible b=new DepositoCombustible(30,30);
-		assertEquals(b.getDepositoNivel(),30);
+		assertEquals(b.getDepositoNivel(),30,0);
 	}
 	@Test
-	void getDepMax() {
+	public void getDepMax() {
 		DepositoCombustible b=new DepositoCombustible(30,30);
-		assertEquals(b.getDepositoMax(),30);
+		assertEquals(b.getDepositoMax(),30,0);
 	}
 	@Test
-	void EstaVacio() {
+	public void EstaVacio() {
 		DepositoCombustible b=new DepositoCombustible(30,0);
 		assertTrue(b.estaVacio()==true);
 	}
 	@Test
-	void EstaLLeno() {
+	public void EstaLLeno() {
 		DepositoCombustible b=new DepositoCombustible(80,40);
 		assertTrue(b.estaLleno()==true);
 	}

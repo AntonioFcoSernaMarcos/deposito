@@ -1,17 +1,13 @@
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.Assert.*;
+import org.junit.*;
+import org.junit.runner.RunWith;
+import org.junit.runners.Parameterized;
+import org.junit.runners.Parameterized.Parameters;
 
-import org.junit.jupiter.api.Test;
-	import static org.junit.jupiter.api.Assertions.*;
-
-	import java.util.Arrays;
-	import java.util.Collection;
-
-	import org.junit.jupiter.api.Test;
-	import org.junit.runner.RunWith;
-	import org.junit.runners.Parameterized;
-	import org.junit.runners.Parameterized.Parameters;
+import java.util.Arrays;
+import java.util.Collection;
 	@RunWith(Parameterized.class)
-	class ConsumirParametrizada {
+	public class ConsumirParametrizada {
 		private double num1;
 		private double num2;
 		private double res;
@@ -26,9 +22,9 @@ import org.junit.jupiter.api.Test;
 			
 		}
 		@Test
-		void ConsumirTestTest() {
+		public void ConsumirTestTest() {
 			DepositoCombustible b=new DepositoCombustible(120,num1);
-			assertEquals(b.consumir(num2),res);
+			assertEquals(b.consumir(num2),res,0);
 		}
 
 	}
